@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* h1,
+h3,
+h4 {
+  font-family: "Chakra Petch", sans-serif;
+} */
+h1 {
+  font-size: 2em;
+}
+h2,
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  position: absolute;
+  z-index: 1;
+  overflow: auto; /* Enable scrolling */
+}
+
+canvas {
+  /* position: absolute; */
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.columns,
+.column {
+  color: rgb(57, 83, 143);
+  /* color: white; */
+  background-color: rgb(222, 247, 252, 0.4);
+  /* padding: 3em; */
+  /* round the damn corners */
+  padding-left: 1.1111em;
+  padding-right: 1.222em;
+  padding-top: 0.888885em;
+  padding-bottom: 0.888888888em;
+  border-radius: 15px;
+  /* make it artsy */
+  backdrop-filter: blur(10px);
+  /* make it pop */
+}
+
+/* Ensure pointer events pass through non-interactive areas of main */
+main:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Allow events to pass through empty areas */
+}
+h2 {
+  font-size: 1.5em;
+}
+
+footer {
+  /* min-height: 10em; */
+  width: 100vw;
+  margin-top: 10em;
+  padding: 1em;
+  padding-bottom: 2em;
+  text-align: center;
+  /* faint grey line above */
+  border-top: 1px solid rgb(222, 247, 252, 1);
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
