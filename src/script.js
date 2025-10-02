@@ -122,7 +122,7 @@ const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
-
+scene.background = new THREE.Color(0x000000);
 // particles.scale.set(10, 10, 10);
 // scene.fog = new THREE.Fog(0xffffff, 0.1, 20);
 /**
@@ -219,11 +219,11 @@ const planeGeometry = new THREE.PlaneGeometry(10, 10, 24, 48);
 // const planeGeometry2 = new THREE.PlaneGeometry(100, 100, 77, 77);
 const planeMaterial = new THREE.MeshLambertMaterial({
   wireframe: true,
-  color: 0x87ceeb,
+  color: 0xffffff,
   // side: THREE.DoubleSide,
 });
 const planeMaterial2 = new THREE.MeshBasicMaterial({
-  color: 0xffffff,
+  color: 0x000000,
   // side: THREE.DoubleSide,
 });
 
